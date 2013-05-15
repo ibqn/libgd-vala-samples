@@ -34,6 +34,7 @@ LIBGD_INIT([
     static
     header-bar
     stack
+    revealer
     vapi
     gi
 ])
