@@ -36,7 +36,6 @@ LIBGD_INIT([
     stack
     revealer
     vapi
-    gi
 ])
 
 # Checks for typedefs, structures, and compiler characteristics.
@@ -60,5 +59,5 @@ valac:........................ ${VALAC}
 vapigen:...................... ${VAPIGEN}
 prefix:....................... ${prefix}
 compiler flags ..............: ${CFLAGS}
-compiler pre-processor falgs : ${CPPFLAGS}
+compiler pre-processor flags : ${CPPFLAGS}
 "
