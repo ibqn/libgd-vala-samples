@@ -1,9 +1,9 @@
-public class TestHeaderBar : Gtk.Window {
+public class HeaderBarSample : Gtk.Window {
     private bool use_custom;
     Gd.HeaderBar bar;
 
-    public TestHeaderBar () {
-        Object (title : "Test HeaderBar widget",
+    public HeaderBarSample () {
+        Object (title: "Test HeaderBar widget",
                 window_position: Gtk.WindowPosition.CENTER);
 
         this.use_custom = true;
@@ -64,7 +64,7 @@ public class TestHeaderBar : Gtk.Window {
             Gtk.Widget.set_default_direction (Gtk.TextDirection.LTR);
         }
 
-        var thb = new TestHeaderBar ();
+        var hbs = new HeaderBarSample ();
         thb.show_all ();
 
         Gtk.main ();

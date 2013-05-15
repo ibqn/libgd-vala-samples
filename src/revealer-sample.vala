@@ -1,7 +1,7 @@
-public class TestRevealer: Gtk.Window {
-    public TestRevealer () {
+public class RevealerSample: Gtk.Window {
+    public RevealerSample () {
         Object (type: Gtk.WindowType.TOPLEVEL);
-        
+
         this.set_size_request (300, 300);
         this.title = "Test Gd.Revealer widget";
         this.hide_titlebar_when_maximized = false;
@@ -23,12 +23,12 @@ public class TestRevealer: Gtk.Window {
     public override void destroy () {
         Gtk.main_quit ();
     }
- 
+
     public static void main (string[] args) {
         Gtk.init (ref args);
 
-        var tr = new TestRevealer ();
-        tr.show_all ();
+        var rs = new RevealerSample ();
+        rs.show_all ();
 
         Gtk.main ();
     }

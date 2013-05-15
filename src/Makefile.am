@@ -1,13 +1,18 @@
 bin_PROGRAMS = \
-	test-header-bar \
-	test-revealer
+	header-bar-sample \
+	revealer-sample \
+	stack-sample
 
-test_header_bar_SOURCES = \
-	test-header-bar.vala \
+header_bar_sample_SOURCES = \
+	header-bar-sample.vala \
 	config.vapi
 
-test_revealer_SOURCES = \
-	test-revealer.vala \
+revealer_sample_SOURCES = \
+	revealer-sample.vala \
+	config.vapi
+
+stack_sample_SOURCES = \
+	stack-sample.vala \
 	config.vapi
 
 AM_LDFLAGS = \
