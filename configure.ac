@@ -8,16 +8,21 @@ AC_CONFIG_SRCDIR([src/test-header-bar.vala])
 AC_CONFIG_MACRO_DIR([m4])
 AC_CONFIG_HEADERS([config.h])
 
-m4_ifdef([AM_SILENT_RULES],[AM_SILENT_RULES([yes])])
+# Simplifies the verbosity of the compilation output.
+# m4_ifdef([AM_SILENT_RULES],[AM_SILENT_RULES([yes])])
 
 # Checks for programs.
 AC_PROG_CC
 AM_PROG_VALAC([0.20])
 # Checks for libraries.
 
-# Checks for header files.
+PKG_PROG_PKG_CONFIG([0.22])
+
+# Checks for modules.
 pkg_modules="glib-2.0 \
-             gobject-2.0"
+             gobject-2.0 \
+             gtk+-3.0"
+
 PKG_CHECK_MODULES(LIBGD_VALA_SAMPLES, [$pkg_modules])
 # This variables are defined by pkg-config modules
 # AC_SUBST(LIBGD_VALA_SAMPLES_CFLAGS)
