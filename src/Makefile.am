@@ -10,8 +10,17 @@ test_revealer_SOURCES = \
 	test-revealer.vala \
 	config.vapi
 
-AM_LDFLAGS = $(LIBGD_VALA_SAMPLES_LIBS)
-AM_CFLAGS  =  $(LIBGD_VALA_SAMPLES_CFLAGS)
+AM_LDFLAGS = \
+	-export-dynamic \
+	$(top_srcdir)/libgd/libgd.la \
+	$(LIBGD_VALA_SAMPLES_LIBS)
+
+AM_CFLAGS = \
+	$(LIBGD_VALA_SAMPLES_CFLAGS) \
+	-Wall
+
+AM_CPPFLAGS = \
+	-I$(top_srcdir)/libgd
 
 AM_VALAFLAGS = \
 	--target-glib=2.36 \
