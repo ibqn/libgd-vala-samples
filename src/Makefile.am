@@ -1,9 +1,17 @@
-bin_PROGRAMS = test-header-bar
-test_header_bar_SOURCES = test-header-bar.vala \
-				config.vapi
+bin_PROGRAMS = \
+	test-header-bar \
+	test-revealer
 
-test_header_bar_LDFLAGS = $(LIBGD_VALA_SAMPLES_LIBS)
-test_header_bar_CFLAGS  =  $(LIBGD_VALA_SAMPLES_CFLAGS)
+test_header_bar_SOURCES = \
+	test-header-bar.vala \
+	config.vapi
+
+test_revealer_SOURCES = \
+	test-revealer.vala \
+	config.vapi
+
+AM_LDFLAGS = $(LIBGD_VALA_SAMPLES_LIBS)
+AM_CFLAGS  =  $(LIBGD_VALA_SAMPLES_CFLAGS)
 
 AM_VALAFLAGS = \
 	--target-glib=2.36 \
