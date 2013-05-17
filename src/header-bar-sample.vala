@@ -65,7 +65,7 @@ public class HeaderBarSample : Gtk.Window {
         }
 
         var hbs = new HeaderBarSample ();
-        thb.show_all ();
+        hbs.show_all ();
 
         Gtk.main ();
     }
